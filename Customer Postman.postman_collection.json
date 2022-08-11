@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "4535fa0e-64d6-4b5e-99ec-dff1abb38414",
+		"name": "Customer Postman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8748833"
+	},
+	"item": [
+		{
+			"name": "Get customers",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get customer by document",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/customers/71893700",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers",
+						"71893700"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Credits",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"documentNumber\": \"71893704\",\r\n    \"documentType\": \"1\",\r\n    \"firstName\": \"Antony\",\r\n    \"lastName\": \"Fernandez\",\r\n    \"createAt\": \"2022-08-11T22:29:39.987+00:00\",\r\n    \"type\": {\r\n        \"type\": \"1\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/customers/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Account",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"documentNumber\": \"71893704\",\r\n    \"documentType\": \"1\",\r\n    \"firstName\": \"Antony\",\r\n    \"lastName\": \"Cahuana\",\r\n    \"createAt\": \"2022-08-11T22:29:39.987+00:00\",\r\n    \"type\": {\r\n        \"type\": \"1\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/customers/71893704",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers",
+						"71893704"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/credits/71893704",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"credits",
+						"71893704"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
